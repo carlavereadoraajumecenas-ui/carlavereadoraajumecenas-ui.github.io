@@ -2,124 +2,173 @@
 <html lang="pt-BR">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#060B1C">
 <title>NEURALLOREE Filmes &amp; I.ARIAN — IA, filmes e importação · Aracaju/SE</title>
-<meta name="description" content="Agentes de IA para empresas, filmes com inteligência artificial e importação Indonésia → Brasil com um parceiro de exportação em Bali. Aracaju, Sergipe, com visão internacional.">
+<meta name="description" content="Agentes de IA para empresas, filmes com inteligência artificial e importação Indonésia → Brasil com curadoria direta em Bali. Aracaju, Sergipe, com visão internacional.">
 <link rel="canonical" href="https://carlavereadoraajumecenas-ui.github.io/">
 <link rel="icon" href="assets/favicon.ico" sizes="any">
 <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
 <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="pt_BR">
-<meta property="og:title" content="NEURALLOREE Filmes & I.ARIAN — IA, filmes e importação · Aracaju/SE">
-<meta property="og:description" content="Agentes de IA para empresas, filmes com inteligência artificial e importação Indonésia → Brasil com um parceiro de exportação em Bali. Aracaju, Sergipe, com visão internacional.">
+<meta property="og:title" content="NEURALLOREE Filmes &amp; I.ARIAN — IA, filmes e importação · Aracaju/SE">
+<meta property="og:description" content="Agentes de IA para empresas, filmes com inteligência artificial e importação Indonésia → Brasil com curadoria direta em Bali. Aracaju, Sergipe, com visão internacional.">
 <meta property="og:url" content="https://carlavereadoraajumecenas-ui.github.io/">
 <meta property="og:image" content="https://carlavereadoraajumecenas-ui.github.io/assets/og-image.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="NEURALLOREE Filmes & I.ARIAN — IA, filmes e importação · Aracaju/SE">
-<meta name="twitter:description" content="Agentes de IA para empresas, filmes com inteligência artificial e importação Indonésia → Brasil com um parceiro de exportação em Bali. Aracaju, Sergipe, com visão internacional.">
+<meta name="twitter:title" content="NEURALLOREE Filmes &amp; I.ARIAN — IA, filmes e importação · Aracaju/SE">
+<meta name="twitter:description" content="Agentes de IA para empresas, filmes com inteligência artificial e importação Indonésia → Brasil com curadoria direta em Bali. Aracaju, Sergipe, com visão internacional.">
 <meta name="twitter:image" content="https://carlavereadoraajumecenas-ui.github.io/assets/og-image.jpg">
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700&family=Manrope:wght@400;500;600;700&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
+
+<link rel="preload" href="assets/fonts/sora.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/manrope.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/montserrat.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="style.css">
+<script>document.documentElement.classList.add('js')</script>
 </head>
 <body>
+<div class="progress" id="progress" aria-hidden="true"></div>
+
+<a class="skip" href="#main">Pular para o conteúdo</a>
+
 <header class="top" id="top">
   <div class="wrap bar">
-    <a class="brand" href="#top" aria-label="Início — I.ARIAN e NEURALLOREE">
-      <span class="wm-iarian">I.ARIAN</span><span class="amp">&amp;</span>
-      <span class="lockup">
-        <img class="logo-icon" src="assets/logo_neuralloree_icon.png" alt="">
-        <span class="wm-nl">NEURALLOREE<small>FILMES · SE</small></span>
-      </span>
+    <a class="brand" href="#top">
+      <span class="wm-iarian">I.ARIAN</span><span class="amp" aria-hidden="true">&amp;</span>
+      <span class="lockup"><img class="logo-icon" src="assets/logo_neuralloree_icon.png" width="36" height="33" alt=""><span class="wm-nl">NEURALLOREE<small>FILMES · SE</small></span></span>
     </a>
     <nav class="nav" aria-label="Principal">
-      <a href="#iarian">I.ARIAN</a><a href="#filmes">Filmes</a><a href="#personalizados">Personalizados</a><a href="#importacao">Importação</a><a href="#como">Como trabalhamos</a><a href="#clinicas">Clínicas</a><a href="#faq">FAQ</a>
+      <a href="#iarian">I.ARIAN</a><a href="#filmes">Filmes</a><a href="#portfolio">Portfólio</a><a href="#importacao">Importação</a><a href="#como">Como trabalhamos</a><a href="#faq">FAQ</a>
     </nav>
-    <a class="btn btn-cyan sm" href="#contato">Agende uma reunião</a>
-    <button class="menu" aria-label="Abrir menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    <a class="btn btn-cyan sm hide-m" href="#contato">Agende uma reunião</a>
+    <button class="menu" id="menuBtn" aria-label="Abrir menu" aria-expanded="false" aria-controls="overlay"><span></span><span></span><span></span></button>
   </div>
 </header>
 
-<main>
+<div class="overlay" id="overlay" aria-hidden="true" inert>
+  <div class="ov-mesh" aria-hidden="true"></div>
+  <nav class="ov-nav" aria-label="Menu">
+    <a href="#iarian"><i>01</i>I.ARIAN</a>
+    <a href="#filmes"><i>02</i>NEURALLOREE Filmes</a>
+    <a href="#portfolio"><i>03</i>Portfólio</a>
+    <a href="#importacao"><i>04</i>Importação</a>
+    <a href="#como"><i>05</i>Como trabalhamos</a>
+    <a href="#contato"><i>06</i>Contato</a>
+  </nav>
+  <div class="ov-cta">
+    <a class="btn btn-grad" href="#contato">Agende uma reunião</a>
+    <a class="btn btn-cyan" href="https://wa.me/5579991988251?text=Ol%C3%A1!%20Quero%20agendar%20uma%20reuni%C3%A3o." target="_blank" rel="noopener">WhatsApp (79) 99198-8251</a>
+  </div>
+</div>
+
+<main id="main">
 <!-- 1. HERO -->
 <section class="hero">
-  <div class="hero-bg" role="img" aria-label="Estúdio de edição — imagem ilustrativa"></div>
-  <svg class="net" viewBox="0 0 800 500" aria-hidden="true"><g stroke="currentColor" stroke-width="1" fill="none" opacity=".5"><path d="M60 420L220 300L380 340L540 180L720 240"/><path d="M220 300L300 140L540 180"/><path d="M380 340L470 460L720 240"/><path d="M300 140L120 90"/></g><g fill="currentColor"><circle cx="60" cy="420" r="4"/><circle cx="220" cy="300" r="5"/><circle cx="380" cy="340" r="4"/><circle cx="540" cy="180" r="6"/><circle cx="720" cy="240" r="4"/><circle cx="300" cy="140" r="4"/><circle cx="470" cy="460" r="3"/><circle cx="120" cy="90" r="3"/></g></svg>
+  <div class="hero-bg" data-parallax="0.16" aria-hidden="true">
+    <picture><source media="(min-width:900px)" srcset="assets/v/hero-wide-poster.webp"><img class="hero-poster" src="assets/v/hero-poster.webp" alt="" width="480" height="854" fetchpriority="high" decoding="async"></picture>
+    <video class="herovid" muted loop playsinline preload="none" poster="assets/v/hero-poster.webp" tabindex="-1" data-wide="assets/v/hero-wide.mp4" data-narrow="assets/v/hero.mp4"></video>
+  </div>
+  <div class="mesh" data-parallax="0.08" aria-hidden="true"><b></b><b></b><b></b></div>
+  <canvas id="net" aria-hidden="true"></canvas>
+  <div class="hero-shade" aria-hidden="true"></div>
   <div class="wrap hero-in">
-    <p class="kick">Aracaju · Sergipe · Brasil — visão internacional</p>
-    <h1>Inteligência artificial que trabalha. Imagem que convence.</h1>
-    <p class="lead">A I.ARIAN coloca equipes de agentes de IA para trabalhar na sua empresa. A NEURALLOREE Filmes cria filmes, avatares e campanhas com inteligência artificial. E, com um parceiro de exportação em Bali, abrimos uma ponte de importação entre a Indonésia e o Brasil.</p>
-    <div class="ctas"><a class="btn btn-cyan" href="#contato">Agende uma reunião</a><a class="btn btn-ghost" href="#iarian">Conheça o que fazemos</a></div>
-    <p class="strip">Agentes de IA · Filmes com IA · Drones DJI · Importação Indonésia → Brasil</p>
-  </div>
-  <span class="ilus">imagem ilustrativa</span>
-</section>
-
-<!-- PROBLEMA (espelha o bloco "difícil" da referência) -->
-<section class="sec">
-  <div class="wrap two">
-    <div><p class="kick">O ponto de partida</p><h2>Comprar tecnologia é fácil. Difícil é fazê-la funcionar no dia a dia.</h2></div>
-    <div>
-      <p>Toda empresa que pensa em IA esbarra nas mesmas perguntas:</p>
-      <ul class="dia">
-        <li>O que dá para automatizar sem perder o atendimento humano?</li>
-        <li>Meus dados e os dos meus clientes ficam protegidos?</li>
-        <li>Quem cuida quando algo sai do roteiro?</li>
-        <li>Como transformar a ferramenta em resultado e em imagem?</li>
-      </ul>
-      <p class="em">Nós montamos, testamos e acompanhamos. Você decide.</p>
+    <div class="hero-txt">
+      <p class="kick rv">Aracaju · Sergipe · Brasil — visão internacional</p>
+      <h1 id="h1">Inteligência artificial que trabalha. <span class="grad-t">Imagem que convence.</span></h1>
+      <p class="lead rv">A I.ARIAN coloca equipes de agentes de IA para trabalhar na sua empresa. A NEURALLOREE Filmes cria filmes, avatares e campanhas com inteligência artificial. E, com curadoria direta em Bali, abrimos uma ponte de importação entre a Indonésia e o Brasil.</p>
+      <div class="ctas rv"><a class="btn btn-cyan magnet" href="#contato">Agende uma reunião</a><a class="btn btn-ghost magnet" href="#portfolio">Ver portfólio</a></div>
     </div>
+    <div class="hero-chips" aria-hidden="true"><span class="float f1" data-parallax="-0.05">Agentes de IA</span><span class="float f2" data-parallax="0.07">Filmes com IA</span><span class="float f3" data-parallax="-0.03">Importação Bali → Brasil</span></div>
+  </div>
+  <span class="ilus hero-ilus">imagem ilustrativa</span>
+  <p class="strip wrap">Agentes de IA · Filmes com IA · Drones DJI · Importação Indonésia → Brasil</p>
+</section>
+
+<!-- NÚMEROS -->
+<section class="stats" aria-label="Em números">
+  <div class="wrap statgrid">
+    <div class="rv"><b><span data-count="3">3</span></b><span>frentes de negócio</span></div>
+    <div class="rv"><b><span data-count="7">7</span></b><span>etapas do storyboard à entrega</span></div>
+    <div class="rv"><b><span data-count="5">5</span></b><span>etapas da importação, porta a porta</span></div>
+    <div class="rv"><b><span data-count="200">200</span></b><span>idiomas e dialetos nos fones tradutores</span></div>
   </div>
 </section>
 
-<!-- VISÃO GERAL -->
-<section class="sec alt">
+<!-- PROBLEMA -->
+<section class="sec prob" id="problema">
+  <div class="wrap narrow c">
+    <h2 class="rv">Comprar tecnologia é fácil. Difícil é fazê-la funcionar no dia a dia.</h2>
+    <p class="lead dark rv">Toda empresa que pensa em IA esbarra nas mesmas perguntas:</p>
+    <ul class="qs">
+      <li class="rv">O que dá para automatizar sem perder o atendimento humano?</li>
+      <li class="rv">Meus dados e os dos meus clientes ficam protegidos?</li>
+      <li class="rv">Quem cuida quando algo sai do roteiro?</li>
+      <li class="rv">Como transformar a ferramenta em resultado e em imagem?</li>
+    </ul>
+    <p class="em rv">Nós montamos, testamos e acompanhamos. Você decide.</p>
+  </div>
+</section>
+
+<!-- 2. SERVIÇOS (swipe) -->
+<section class="sec" id="servicos">
   <div class="wrap">
-    <p class="kick c">Um grupo, três frentes</p>
-    <h2 class="c">Duas empresas. Uma só equipe — de pessoas e de agentes.</h2>
-    <div class="grid3">
-      <a class="card link" href="#iarian"><span class="wm-iarian big">I.ARIAN</span><h3>Automação e agentes de IA</h3><p>Equipes de agentes que atendem, agendam, organizam e acompanham — com segurança e LGPD.</p></a>
-      <a class="card link" href="#filmes"><span class="lockup stacked"><img class="logo-icon md" src="assets/logo_neuralloree_icon.png" alt=""><span class="wm-nl">NEURALLOREE<small>FILMES · SE</small></span></span><h3>NEURALLOREE Filmes</h3><p>Filmes e comerciais com IA, atores e avatares digitais, drones e conteúdo vertical.</p></a>
-      <a class="card link" href="#importacao"><span class="pill ice">Nova frente</span><h3>Importação Indonésia → Brasil</h3><p>Café torrado e cacau de Sulawesi para a indústria, com um parceiro de exportação em Bali.</p></a>
-    </div>
+    <p class="kick c rv">Um grupo, várias frentes</p>
+    <h2 class="c rv">Duas empresas. Uma só equipe — de pessoas e de agentes.</h2>
+  </div>
+  <div class="snapwrap wrap">
+    <ul class="snap svc" data-snap aria-label="Nossas frentes (deslize)">
+      <li><a class="card gb link" href="#iarian"><span class="wm-iarian big">I.ARIAN</span><h3>Automação e agentes de IA</h3><p>Equipes de agentes que atendem, agendam, organizam e acompanham — com segurança e LGPD.</p><span class="more">Conhecer →</span></a></li>
+      <li><a class="card gb link" href="#filmes"><span class="lockup stacked"><img class="logo-icon md" src="assets/logo_neuralloree_icon.png" width="64" height="58" alt="" loading="lazy"><span class="wm-nl">NEURALLOREE<small>FILMES · SE</small></span></span><h3>Filmes e comerciais com IA</h3><p>Atores e avatares digitais, drones DJI e conteúdo vertical, do storyboard à entrega.</p><span class="more">Conhecer →</span></a></li>
+      <li><a class="card gb link" href="#personalizados"><span class="pill pink">Para famílias</span><h3>Filmes e livros personalizados</h3><p>Quando a criança da família é a estrela: filmes, livros na Amazon e álbuns.</p><span class="more">Conhecer →</span></a></li>
+      <li><a class="card gb link" href="#clinicas"><span class="pill ice">Saúde</span><h3>Para clínicas e consultórios</h3><p>Atendimento e agenda com rigor de LGPD e CFM, sem promessas milagrosas.</p><span class="more">Conhecer →</span></a></li>
+      <li><a class="card gb link" href="#importacao"><span class="pill ice">Nova frente</span><h3>Importação Indonésia–Brasil</h3><p>Cafés especiais, cacau, iguarias, mobiliário, arte e artesanato, com curadoria direta em Bali.</p><span class="more">Conhecer →</span></a></li>
+    </ul>
+    <div class="dots" data-dots role="group" aria-label="Navegação do carrossel"></div>
   </div>
 </section>
 
-<!-- 2. I.ARIAN -->
-<section class="sec" id="iarian">
+<!-- 3. I.ARIAN -->
+<section class="sec alt" id="iarian">
   <div class="wrap">
     <div class="two">
       <div>
-        <p class="kick">I.ARIAN</p>
-        <h2>Bots que fazem, não só falam.</h2>
-        <p class="lead dark">Automação para empresa e rotina. A I.ARIAN implanta equipes de agentes de inteligência artificial que executam tarefas reais — e encaminham à sua equipe o que pede julgamento humano.</p>
-        <p>Nós trabalhamos assim todos os dias: a nossa própria operação roda com agentes especializados. É essa experiência que levamos para a sua empresa.</p>
+        <p class="kick rv">I.ARIAN</p>
+        <h2 class="rv">Bots que fazem, não só falam.</h2>
+        <p class="lead rv">Automação para empresa e rotina. A I.ARIAN implanta equipes de agentes de inteligência artificial que executam tarefas reais — e encaminham à sua equipe o que pede julgamento humano.</p>
+        <p class="rv">Nós trabalhamos assim todos os dias: a nossa própria operação roda com agentes especializados. É essa experiência que levamos para a sua empresa.</p>
       </div>
-      <div class="team">
+      <div class="team gb rv">
         <p class="kick sm">Sua equipe de IA</p>
         <div class="chips"><span>Agenda e e-mail</span><span>Atendimento no WhatsApp</span><span>Financeiro</span><span>Imagens</span><span>Trilha e áudio</span><span>Prospecção</span><span>Projetos</span></div>
-        <div class="flow"><span>Atender</span><i>→</i><span>Agendar</span><i>→</i><span>Confirmar</span><i>→</i><span>Equipe humana</span></div>
+        <div class="flow"><span>Atender</span><i aria-hidden="true">→</i><span>Agendar</span><i aria-hidden="true">→</i><span>Confirmar</span><i aria-hidden="true">→</i><span>Equipe humana</span></div>
         <p class="note">WhatsApp pela API oficial da Meta e automações em n8n.</p>
       </div>
     </div>
-    <div class="grid3 mt">
-      <div class="card"><h3>Implantação</h3><p>Mapeamos processos, desenhamos os agentes, integramos às suas ferramentas e testamos antes de entrar no ar.</p></div>
-      <div class="card premium"><span class="pill gold">Premium</span><h3>Seu Jarvis pessoal</h3><p>No pacote Premium, além da equipe da empresa, você recebe uma secretária de IA própria para e-mail, agenda e rotina — a mesma lógica que usamos internamente.</p></div>
-      <div class="card"><h3>Acompanhamento</h3><p>Ajustes, relatórios e evolução contínua. Os agentes ajudam; quem decide é você.</p></div>
-    </div>
+    <ul class="snap trio" data-snap aria-label="Como a I.ARIAN entrega (deslize)">
+      <li class="card gb rv"><span class="num">01</span><h3>Implantação</h3><p>Mapeamos processos, desenhamos os agentes, integramos às suas ferramentas e testamos antes de entrar no ar.</p></li>
+      <li class="card gb premium rv"><span class="pill cyan">Premium</span><h3>Seu Jarvis pessoal</h3><p>No pacote Premium, além da equipe da empresa, você recebe uma secretária de IA própria para e-mail, agenda e rotina — a mesma lógica que usamos internamente.</p></li>
+      <li class="card gb rv"><span class="num">03</span><h3>Acompanhamento</h3><p>Ajustes, relatórios e evolução contínua. Os agentes ajudam; quem decide é você.</p></li>
+    </ul>
+    <div class="dots" data-dots role="group" aria-label="Navegação do carrossel"></div>
   </div>
 </section>
 
-<!-- SEGURANÇA (faixa escura, espelha o bloco dividido da referência) -->
-<section class="split dark" id="seguranca">
+<!-- 4. SEGURANÇA -->
+<section class="split sec-sec" id="seguranca">
+  <figure class="split-art rv">
+    <div class="shot gb" data-parallax="-0.04">
+      <img src="assets/i/seguranca-576.webp" srcset="assets/i/seguranca-360.webp 360w, assets/i/seguranca-576.webp 576w" sizes="(max-width:760px) 70vw, 300px" width="576" height="763" alt="Carla Mecenas na capa do nosso reel educativo sobre segurança digital" loading="lazy" decoding="async">
+    </div>
+    <figcaption>Capa do nosso reel educativo sobre segurança digital.</figcaption>
+  </figure>
   <div class="split-txt">
-    <p class="kick">Segurança e LGPD</p>
-    <h2>Implantamos IA com segurança.</h2>
-    <p>Criminosos também usam inteligência artificial. Por isso, cada projeto nasce com proteção desde o primeiro dia:</p>
-    <ul class="dia light">
+    <p class="kick rv">Segurança e LGPD</p>
+    <h2 class="rv">Implantamos IA com segurança.</h2>
+    <p class="rv">Criminosos também usam inteligência artificial. Por isso, cada projeto nasce com proteção desde o primeiro dia:</p>
+    <ul class="dia rv">
       <li>Menor acesso possível para cada agente</li>
       <li>Verificação em duas etapas e cofre de senhas</li>
       <li>Atualizações rápidas e nada de plugin desconhecido</li>
@@ -127,23 +176,40 @@
       <li>Dados sob o controle de quem contrata, conforme a LGPD (Lei 13.709/2018), e sem uso para treinar modelos públicos</li>
     </ul>
   </div>
-  <div class="split-art shield" aria-hidden="true">
-    <svg viewBox="0 0 200 220"><path d="M100 10L180 40V110C180 160 145 195 100 210C55 195 20 160 20 110V40Z" fill="none" stroke="currentColor" stroke-width="3"/><path d="M65 112L92 138L140 86" fill="none" stroke="currentColor" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+</section>
+
+<!-- 5. CLÍNICAS -->
+<section class="sec" id="clinicas">
+  <div class="wrap two center">
+    <div>
+      <p class="kick rv">Para clínicas e consultórios</p>
+      <h2 class="rv">Rigor de saúde. Sem promessas milagrosas.</h2>
+      <p class="rv">Agentes que atendem, agendam, confirmam e lembram retornos — e que nunca diagnosticam, prescrevem ou orientam tratamento. Toda dúvida clínica vai direto para a equipe da casa.</p>
+    </div>
+    <ul class="checks gb rv">
+      <li>Dados de saúde tratados como dados sensíveis (LGPD, art. 11)</li>
+      <li>Comunicação dentro das regras de publicidade médica do CFM</li>
+      <li>Sem antes e depois, sem garantia de resultado, sem sensacionalismo</li>
+      <li>Registro do que o agente responde e revisão periódica</li>
+    </ul>
   </div>
 </section>
 
-<!-- 3. NEURALLOREE FILMES -->
-<section class="sec theme-nl" id="filmes">
+<!-- 6. NEURALLOREE FILMES -->
+<section class="sec alt theme-nl" id="filmes">
   <div class="wrap">
-    <div class="head-row"><div><p class="kick">NEURALLOREE Filmes</p><h2>Filmes com inteligência artificial, para qualquer segmento.</h2></div>
-    <span class="lockup lg"><img class="logo-icon lg" src="assets/logo_neuralloree_icon.png" alt="Símbolo NEURALLOREE Filmes"><span class="wm-nl">NEURALLOREE<small>FILMES · SE</small></span></span></div>
-    <div class="grid4">
-      <div class="card"><h3>Comerciais e institucionais</h3><p>Do roteiro ao filme final, para a marca, o produto ou o serviço — em qualquer tema do seu segmento.</p></div>
-      <div class="card"><h3>Atores e avatares de IA</h3><p>Porta-vozes digitais para treinamentos, apresentações e campanhas, sempre identificados como conteúdo de IA.</p></div>
-      <div class="card"><h3>Drones DJI com ActiveTrack</h3><p>Tomadas aéreas que acompanham pessoas e veículos: obras, empreendimentos e lançamentos imobiliários.</p></div>
-      <div class="card"><h3>Conteúdo vertical</h3><p>Reels, Shorts e Status em 9:16, com legenda palavra a palavra e áudio no padrão das plataformas.</p></div>
+    <div class="head-row"><div><p class="kick rv">NEURALLOREE Filmes</p><h2 class="rv">Filmes com inteligência artificial, para qualquer segmento.</h2></div>
+    <span class="lockup lg rv"><img class="logo-icon lg" src="assets/logo_neuralloree_icon.png" width="88" height="80" alt="Símbolo NEURALLOREE Filmes" loading="lazy"><span class="wm-nl">NEURALLOREE<small>FILMES · SE</small></span></span></div>
+    <div class="two center mt">
+      <figure class="media gb rv"><img src="assets/i/avatar-960.webp" srcset="assets/i/avatar-480.webp 480w, assets/i/avatar-960.webp 960w" sizes="(max-width:900px) 92vw, 540px" width="960" height="540" alt="Porta-voz digital feita com IA em escritório envidraçado" loading="lazy" decoding="async"><span class="ilus">imagem ilustrativa</span><figcaption>Atores e avatares de IA: porta-vozes digitais para treinamentos e campanhas.</figcaption></figure>
+      <ul class="snap grid2" data-snap aria-label="O que fazemos (deslize)">
+        <li class="card gb rv"><h3>Comerciais e institucionais</h3><p>Do roteiro ao filme final, para a marca, o produto ou o serviço — em qualquer tema do seu segmento.</p></li>
+        <li class="card gb rv"><h3>Atores e avatares de IA</h3><p>Porta-vozes digitais para treinamentos, apresentações e campanhas, sempre identificados como conteúdo de IA.</p></li>
+        <li class="card gb rv"><h3>Drones DJI com ActiveTrack</h3><p>Tomadas aéreas que acompanham pessoas e veículos: obras, empreendimentos e lançamentos imobiliários.</p></li>
+        <li class="card gb rv"><h3>Conteúdo vertical</h3><p>Reels, Shorts e Status em 9:16, com legenda palavra a palavra e áudio no padrão das plataformas.</p></li>
+      </ul>
     </div>
-    <div class="pipe">
+    <div class="pipe gb rv">
       <p class="kick sm">Do storyboard à entrega</p>
       <ol><li>Briefing</li><li>Roteiro</li><li>Storyboard</li><li>Geração e captação</li><li>Edição, trilha e voz</li><li>Revisão humana</li><li>Entrega</li></ol>
       <p class="note">Cenas geradas por IA saem com o selo “imagens ilustrativas”. Texto na tela é sempre composto por código, sem letras deformadas.</p>
@@ -151,147 +217,213 @@
   </div>
 </section>
 
-<!-- 4. PERSONALIZADOS -->
+<!-- 7. PORTFÓLIO -->
+<section class="sec theme-nl" id="portfolio">
+  <div class="wrap">
+    <p class="kick c rv">Portfólio e showreel</p>
+    <h2 class="c rv">O que já produzimos com IA.</h2>
+    <p class="lead dark c rv">Trechos e capas de entregas nossas. Deslize para ver mais.</p>
+  </div>
+  <div class="snapwrap wrap">
+    <div class="arrows" data-arrows><button type="button" aria-label="Anterior" data-prev>‹</button><button type="button" aria-label="Próximo" data-next>›</button></div>
+    <ul class="snap port" data-snap aria-label="Portfólio (deslize)">
+      <li class="pcard gb"><div class="pm"><video class="lazyvid" muted loop playsinline preload="none" poster="assets/v/baile-poster.webp" width="432" height="768" aria-hidden="true" tabindex="-1"><source src="assets/v/baile.mp4" type="video/mp4"></video><span class="ilus">imagem ilustrativa</span></div><h3>Atores de IA em cena</h3><p>Filme de época com atores digitais.</p></li>
+      <li class="pcard gb"><div class="pm"><video class="lazyvid" muted loop playsinline preload="none" poster="assets/v/sereias-poster.webp" width="432" height="437" aria-hidden="true" tabindex="-1"><source src="assets/v/sereias.mp4" type="video/mp4"></video><span class="ilus">imagem ilustrativa</span></div><h3>Sereias e princesas</h3><p>Filme personalizado para crianças.</p></li>
+      <li class="pcard gb"><div class="pm"><img src="assets/i/avatar-480.webp" srcset="assets/i/avatar-480.webp 480w, assets/i/avatar-960.webp 960w" sizes="(max-width:760px) 62vw, 280px" width="480" height="270" alt="Avatar de IA em escritório" loading="lazy" decoding="async"><span class="ilus">imagem ilustrativa</span></div><h3>Avatar porta-voz</h3><p>Apresentadora digital para treinamentos.</p></li>
+      <li class="pcard gb"><div class="pm"><img src="assets/i/seguranca-360.webp" srcset="assets/i/seguranca-360.webp 360w, assets/i/seguranca-576.webp 576w" sizes="(max-width:760px) 62vw, 280px" width="360" height="477" alt="Capa do reel de segurança digital" loading="lazy" decoding="async"></div><h3>Reel de segurança</h3><p>Conteúdo educativo vertical com legendas palavra a palavra.</p></li>
+      <li class="pcard gb"><div class="pm"><img src="assets/i/princesa-capa-360.webp" srcset="assets/i/princesa-capa-360.webp 360w, assets/i/princesa-capa-540.webp 540w" sizes="(max-width:760px) 62vw, 280px" width="360" height="562" alt="Capa do filme personalizado de princesas e sereias" loading="lazy" decoding="async"><span class="ilus">imagem ilustrativa</span></div><h3>“Seu filho virou princesa?”</h3><p>Capa de campanha de filmes personalizados.</p></li>
+      <li class="pcard gb"><div class="pm"><img src="assets/i/receita-360.webp" srcset="assets/i/receita-360.webp 360w, assets/i/receita-540.webp 540w" sizes="(max-width:760px) 62vw, 280px" width="360" height="640" alt="Quadro de um reel de receita com panela" loading="lazy" decoding="async"><span class="ilus">imagem ilustrativa</span></div><h3>Reels de receitas</h3><p>Série vertical com cenas de IA.</p></li>
+      <li class="pcard gb"><div class="pm"><img src="assets/i/frutinhas-360.webp" srcset="assets/i/frutinhas-360.webp 360w, assets/i/frutinhas-640.webp 640w" sizes="(max-width:760px) 62vw, 280px" width="360" height="360" alt="Personagens de frutas da série infantil" loading="lazy" decoding="async"><span class="ilus">imagem ilustrativa</span></div><h3>Série infantil</h3><p>Personagens originais para vídeos infantis.</p></li>
+    </ul>
+    <div class="dots" data-dots role="group" aria-label="Navegação do carrossel"></div>
+  </div>
+  <div class="marquee" aria-label="Acervo em movimento" data-marquee>
+    <div class="mtrack">
+      <div class="mset">
+        <img src="assets/i/seguranca-360.webp" width="360" height="477" alt="Reel de segurança digital" loading="lazy" decoding="async">
+        <img src="assets/i/princesa-capa-360.webp" width="360" height="562" alt="Capa de filme personalizado" loading="lazy" decoding="async">
+        <img src="assets/i/avatar-480.webp" width="480" height="270" alt="Avatar de IA porta-voz" loading="lazy" decoding="async">
+        <img src="assets/i/receita-360.webp" width="360" height="640" alt="Reel de receita" loading="lazy" decoding="async">
+        <img src="assets/v/baile-poster.webp" width="432" height="768" alt="Filme de época com atores de IA" loading="lazy" decoding="async">
+        <img src="assets/i/frutinhas-360.webp" width="360" height="360" alt="Série infantil" loading="lazy" decoding="async">
+        <img src="assets/v/sereias-poster.webp" width="432" height="437" alt="Filme de sereias" loading="lazy" decoding="async">
+      </div>
+      <div class="mset" aria-hidden="true">
+        <img src="assets/i/seguranca-360.webp" width="360" height="477" alt="" loading="lazy" decoding="async">
+        <img src="assets/i/princesa-capa-360.webp" width="360" height="562" alt="" loading="lazy" decoding="async">
+        <img src="assets/i/avatar-480.webp" width="480" height="270" alt="" loading="lazy" decoding="async">
+        <img src="assets/i/receita-360.webp" width="360" height="640" alt="" loading="lazy" decoding="async">
+        <img src="assets/v/baile-poster.webp" width="432" height="768" alt="" loading="lazy" decoding="async">
+        <img src="assets/i/frutinhas-360.webp" width="360" height="360" alt="" loading="lazy" decoding="async">
+        <img src="assets/v/sereias-poster.webp" width="432" height="437" alt="" loading="lazy" decoding="async">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 8. PERSONALIZADOS + BLOOD REBORN -->
 <section class="sec alt theme-nl" id="personalizados">
   <div class="wrap">
-    <p class="kick c">Filmes e livros personalizados</p>
-    <h2 class="c">Quando a estrela da história é quem você ama.</h2>
+    <p class="kick c rv">Filmes e livros personalizados</p>
+    <h2 class="c rv">Quando a estrela da história é quem você ama.</h2>
     <div class="gallery">
-      <figure><img src="assets/princesa-dourada.webp" alt="Princesa em salão dourado"><figcaption>Filmes de princesas e sereias — a criança da família é a protagonista</figcaption><span class="ilus">imagem ilustrativa</span></figure>
-      <figure><img src="assets/livro-sereia.webp" alt="Sereia criança no fundo do mar"><figcaption>Livros infantis publicados na Amazon (KDP)</figcaption><span class="ilus">imagem ilustrativa</span></figure>
-      <figure><img src="assets/sereia-ilha.webp" alt="Sereia em rocha diante de castelo"><figcaption>Álbuns personalizados para festas e datas especiais</figcaption><span class="ilus">imagem ilustrativa</span></figure>
+      <figure class="gb rv"><img src="assets/princesa-dourada.webp" width="720" height="1280" alt="Princesa em salão dourado" loading="lazy" decoding="async"><figcaption>Filmes de princesas e sereias — a criança da família é a protagonista</figcaption><span class="ilus">imagem ilustrativa</span></figure>
+      <figure class="gb rv"><img src="assets/livro-sereia.webp" width="720" height="1264" alt="Sereia criança no fundo do mar" loading="lazy" decoding="async"><figcaption>Livros infantis publicados na Amazon (KDP)</figcaption><span class="ilus">imagem ilustrativa</span></figure>
+      <figure class="gb rv"><img src="assets/sereia-ilha.webp" width="720" height="1264" alt="Sereia em rocha diante de castelo" loading="lazy" decoding="async"><figcaption>Álbuns personalizados para festas e datas especiais</figcaption><span class="ilus">imagem ilustrativa</span></figure>
     </div>
     <p class="c note">Fotos usadas apenas para o pedido e excluídas após a entrega, conforme a LGPD.</p>
   </div>
 </section>
 
-<!-- 5. PROVA: BLOOD REBORN -->
-<section class="split dark proof">
-  <div class="split-art book" aria-label="Capa em preparação">
-    <div class="cover"><span>BLOOD<br>REBORN</span><em>The Serpent's Wake</em><svg viewBox="0 0 120 60" aria-hidden="true"><path d="M5 40C25 10 45 55 65 30S100 10 115 25" fill="none" stroke="currentColor" stroke-width="3"/></svg></div>
+<section class="split proof" id="prova">
+  <div class="split-art book">
+    <div class="cover gb rv"><span>BLOOD<br>REBORN</span><em>The Serpent's Wake</em><svg viewBox="0 0 120 60" aria-hidden="true"><path d="M5 40C25 10 45 55 65 30S100 10 115 25" fill="none" stroke="currentColor" stroke-width="3"/></svg></div>
+    
   </div>
   <div class="split-txt">
-    <p class="kick">Prova de capacidade</p>
-    <h2>BLOOD REBORN: THE SERPENT'S WAKE</h2>
-    <p class="lead light">Um livro de quase 500 páginas sobre mitos folclóricos e a história da Ucrânia e da região, ilustrado com cenas de IA fiéis ao texto.</p>
-    <p>Um ano de edição diária, em parceria internacional. É o mesmo rigor que aplicamos em cada filme: a cena serve ao texto, não o contrário.</p>
+    <p class="kick rv">Prova de capacidade</p>
+    <h2 class="rv">BLOOD REBORN: THE SERPENT'S WAKE</h2>
+    <p class="lead rv">Um livro de quase 500 páginas sobre mitos folclóricos e a história da Ucrânia e da região, ilustrado com cenas de IA fiéis ao texto.</p>
+    <p class="rv">Um ano de edição diária, em parceria internacional. É o mesmo rigor que aplicamos em cada filme: a cena serve ao texto, não o contrário.</p>
   </div>
 </section>
 
-<!-- 6. IMPORTAÇÃO -->
-<section class="sec import" id="importacao">
-  <div class="wrap">
-    <div class="two">
-      <div>
-        <p class="kick">Importação Indonésia → Brasil</p>
-        <h2>Da origem, na Indonésia, até a sua empresa no Brasil.</h2>
-        <p class="lead light">Com um parceiro de exportação sediado em Bali, representamos no Brasil o fornecimento de produtos indonésios — o parceiro cuida da origem, e nós do comprador brasileiro, da conformidade e da comunicação.</p>
+<!-- 9. IMPORTAÇÃO (bloco próprio, claro) -->
+<section class="imp" id="importacao">
+  <div class="imp-band">
+    <img src="assets/farm.webp" width="1280" height="720" alt="Lavoura de café em encosta" loading="lazy" decoding="async" data-parallax="0.14">
+    <span class="ilus">imagem ilustrativa</span>
+    <div class="wrap imp-head">
+      <p class="imp-badge"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c-3 3.5-3 14.5 0 18M12 3c3 3.5 3 14.5 0 18"/></svg>Nova frente de negócios</p>
+      <h2>Importação Indonésia–Brasil · curadoria direta em Bali</h2>
+      <p class="imp-lead">Cafés especiais, cacau, iguarias, mobiliário, arte e artesanato. Uma rede de fornecedores construída a partir de vivência local em Ubud, com seleção direta e acompanhamento de cada pedido até o Brasil.</p>
+      
+    </div>
+  </div>
+
+  <!-- Experiência Bali: café e cacau -->
+  <div class="exp" id="experiencia">
+    <div class="exp-glow" aria-hidden="true"></div>
+    <div class="wrap exp-in">
+      <p class="kick rv">Experiência Bali · café e cacau</p>
+      <h3 class="exp-title rv">Do vulcão à xícara: <em class="serif">uma experiência sensorial</em> de Bali.</h3>
+      <p class="exp-lead rv">Os cafés e os cacaus de Bali nascem de paisagens que se leem no sabor: solo vulcânico, altitude, terraços cultivados à mão. Queremos trazer essa experiência, inteira, para o Brasil.</p>
+
+      <div class="exp-grid">
+        <figure class="scape gb rv" aria-label="Ilustração abstrata do vulcão e dos terraços de Bali">
+          <svg class="layer l1" data-parallax="0.04" viewBox="0 0 800 520" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><defs><linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#0A1630"/><stop offset=".55" stop-color="#2a2a7a"/><stop offset="1" stop-color="#8A3FFC" stop-opacity=".75"/></linearGradient><radialGradient id="sun"><stop offset="0" stop-color="#FF6EB5"/><stop offset=".6" stop-color="#FF3D9A" stop-opacity=".35"/><stop offset="1" stop-color="#FF3D9A" stop-opacity="0"/></radialGradient></defs><rect width="800" height="520" fill="url(#sky)"/><circle cx="560" cy="250" r="150" fill="url(#sun)"/><g fill="#fff" opacity=".8"><circle cx="90" cy="60" r="1.6"/><circle cx="210" cy="110" r="1.2"/><circle cx="330" cy="50" r="1.6"/><circle cx="450" cy="90" r="1.2"/><circle cx="700" cy="70" r="1.6"/><circle cx="640" cy="130" r="1.2"/></g></svg>
+          <svg class="layer l2" data-parallax="0.09" viewBox="0 0 800 520" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><defs><linearGradient id="vol" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#4D88FF"/><stop offset="1" stop-color="#102044"/></linearGradient></defs><path d="M-20 400 L150 300 L260 330 L360 210 L420 170 L455 185 L500 175 L545 215 L650 320 L760 290 L840 360 V540 H-20Z" fill="url(#vol)" opacity=".9"/><path d="M420 170 L455 185 L500 175" fill="none" stroke="#B8E8FF" stroke-width="2"/><path d="M455 172 C440 130 480 110 470 70 C462 40 490 30 484 8" fill="none" stroke="#B8E8FF" stroke-width="2" opacity=".5" stroke-linecap="round"/></svg>
+          <svg class="layer l3" data-parallax="0.15" viewBox="0 0 800 520" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><g fill="none" stroke="#7DD8F7" stroke-width="1.4" stroke-opacity=".55"><path d="M-20 370 C150 340 260 395 400 365 S650 340 820 375"/><path d="M-20 405 C120 380 280 430 420 400 S660 380 820 410"/><path d="M-20 440 C160 418 270 465 430 436 S680 418 820 446"/><path d="M-20 478 C130 455 300 500 440 474 S690 455 820 482"/></g><path d="M-20 405 C120 380 280 430 420 400 S660 380 820 410 V540 H-20Z" fill="#0A1630" opacity=".55"/><path d="M-20 440 C160 418 270 465 430 436 S680 418 820 446 V540 H-20Z" fill="#102044" opacity=".8"/><path d="M-20 478 C130 455 300 500 440 474 S690 455 820 482 V540 H-20Z" fill="#060B1C"/></svg>
+          <span class="ilus">imagem ilustrativa</span>
+          <figcaption>Terroir de Bali — Kintamani, Monte Batur e os terraços de Ubud.</figcaption>
+        </figure>
+
+        <ol class="chap">
+          <li class="rv"><span class="serif n">I</span><div><h4>Terroir vulcânico</h4><p>Nas terras altas de Kintamani, em volta do Monte Batur, o café cresce em solo vulcânico e em altitude, com clima fresco e luz intensa. É a base de perfis que costumam ser descritos como limpos e cítricos.</p></div></li>
+          <li class="rv"><span class="serif n">II</span><div><h4>Terraços de Ubud</h4><p>Entre arrozais em degraus e floresta, o cultivo de café e de cacau segue, em geral, em pequena escala e com mão de obra artesanal: colheita seletiva, fermentação e secagem acompanhadas de perto.</p></div></li>
+          <li class="rv"><span class="serif n">III</span><div><h4>Notas de degustação</h4><p>Perfis geralmente descritos para a região. A prova de amostras é combinada em cada pedido.</p>
+            <div class="notes"><span class="nt-h">Café</span><span>cítrico</span><span>floral</span><span>frutas amarelas</span><span>corpo médio</span><span class="nt-h">Cacau</span><span>frutas vermelhas</span><span>amargor suave</span><span>nozes</span></div></div></li>
+          <li class="rv"><span class="serif n">IV</span><div><h4>Origem contada</h4><p>Cada lote chega com a sua história: de onde veio, quem plantou, como foi processado. Contamos essa trajetória ao comprador brasileiro, sem exageros e sem prometer o que não podemos comprovar.</p></div></li>
+        </ol>
       </div>
-      <figure class="ph"><img src="assets/farm.webp" alt="Lavoura de café em encosta"><span class="ilus">imagem ilustrativa</span></figure>
-    </div>
-    <div class="grid3 mt">
-      <div class="card on-dark"><figure class="mini"><img src="assets/roasted.webp" alt="Grãos de café torrado"><span class="ilus">imagem ilustrativa</span></figure><h3>Café torrado</h3><p>Cafés indonésios torrados de origens tradicionais, como Sumatra (Gayo), Java e Toraja, para cafeterias, torrefações e varejo especializado.</p><span class="pill">Disponibilidade confirmada por pedido</span></div>
-      <div class="card on-dark"><div class="mini cacao" aria-hidden="true"><svg viewBox="0 0 300 150"><g fill="none" stroke="#e2c27a" stroke-width="2"><path d="M60 75C60 40 110 25 150 40C175 50 175 100 150 110C110 125 60 110 60 75Z"/><path d="M75 60C100 52 140 52 160 62M70 75C100 70 140 72 168 78M75 92C100 98 140 96 160 92"/><path d="M190 60c20-15 50-10 55 10s-15 40-35 38-35-30-20-48z"/><path d="M205 75c10-6 25-4 32 2"/></g></svg></div><h3>Cacau de Sulawesi</h3><p>Amêndoas de cacau de Sulawesi destinadas à industrialização no Brasil, com tratamento fitossanitário na origem.</p><span class="pill">Somente para indústria</span></div>
-      <div class="card on-dark soon"><div class="mini decor" aria-hidden="true"></div><h3>Móveis e decoração</h3><p>Peças indonésias para projetos de interiores, hotelaria e varejo.</p><span class="pill gold">Em breve</span></div>
-    </div>
-  </div>
-</section>
 
-<section class="sec" id="regulatorio">
-  <div class="wrap">
-    <p class="kick">Transparência regulatória</p>
-    <h2>O que pode — e o que não pode — entrar no Brasil.</h2>
-    <p class="lead dark">Preferimos dizer antes. Cada produto passa pelas regras do Ministério da Agricultura (MAPA) e da Receita Federal.</p>
-    <div class="table">
-      <div class="row hd"><span>Produto</span><span>Situação</span><span>Base</span></div>
-      <div class="row"><span><b>Café torrado</b><br><small>NCM 0901.21</small></span><span><i class="tag ok">Viável</i> Categoria de risco 1. Alíquota de importação de 0% para café torrado não acondicionado em cápsulas (alíquota geral de 9%).</span><span><small>Lista de categoria de risco do MAPA; Resolução Gecex 709/2025</small></span></div>
-      <div class="row"><span><b>Cacau em amêndoas</b><br><small>origem Indonésia</small></span><span><i class="tag warn">Condicionado</i> Admitido somente de Sulawesi, embarcado pelos portos de Makassar ou Pantoloan, com tratamento com fosfina e sem revenda antes do processamento industrial.</span><span><small>IN SDA 72/2003, alterada pela IN 47/2011</small></span></div>
-      <div class="row"><span><b>Café verde (cru)</b><br><small>origem Indonésia</small></span><span><i class="tag no">Não oferecemos</i> Sem via de importação autorizada: a Indonésia não consta da lista de produtos vegetais com importação autorizada (PVIA) para café verde.</span><span><small>IN MAPA 25/2020; consulta PVIA de 20/11/2026</small></span></div>
-    </div>
-    <p class="note">Informações de referência, sujeitas a atualização das normas. Cada operação é conferida caso a caso antes da proposta.</p>
-  </div>
-</section>
-
-<!-- 7. COMO TRABALHAMOS -->
-<section class="sec alt" id="como">
-  <div class="wrap">
-    <p class="kick c">Como trabalhamos</p>
-    <h2 class="c">Um caminho claro, do primeiro contato à entrega.</h2>
-    <ol class="steps">
-      <li><b>01</b><h3>Escuta</h3><p>Entendemos a empresa, o objetivo, o prazo e as regras do seu setor.</p></li>
-      <li><b>02</b><h3>Proposta</h3><p>Desenhamos a solução — agentes, filme ou importação — com escopo e etapas por escrito.</p></li>
-      <li><b>03</b><h3>Produção</h3><p>Agentes configurados e testados, filmes roteirizados e revisados, cargas conferidas na origem.</p></li>
-      <li><b>04</b><h3>Conformidade</h3><p>LGPD, CFM, MAPA e documentação: checamos antes, não depois.</p></li>
-      <li><b>05</b><h3>Entrega e acompanhamento</h3><p>Colocamos no ar, entregamos na porta e seguimos ao seu lado.</p></li>
-    </ol>
-    <div class="door"><p class="kick sm">Na importação, porta a porta</p><div class="flow wide"><span>Origem</span><i>→</i><span>Qualidade</span><i>→</i><span>Documentos e MAPA</span><i>→</i><span>Logística</span><i>→</i><span>Entrega ao cliente</span></div></div>
-    <p class="c em">Nós orientamos e executamos. Você toma a decisão comercial.</p>
-  </div>
-</section>
-
-<!-- 8. EQUIPAMENTO -->
-<section class="sec" id="equipamento">
-  <div class="wrap">
-    <p class="kick">Estrutura</p>
-    <h2>Equipamento de ponta, a serviço do projeto.</h2>
-    <div class="grid4 eq">
-      <div class="card"><svg viewBox="0 0 48 48" aria-hidden="true"><rect x="6" y="9" width="36" height="24" rx="2"/><path d="M16 39h16M24 33v6"/></svg><h3>Mac M5</h3><p>Edição, finalização e IA local com folga de desempenho.</p></div>
-      <div class="card"><svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="10" cy="12" r="6"/><circle cx="38" cy="12" r="6"/><circle cx="10" cy="36" r="6"/><circle cx="38" cy="36" r="6"/><rect x="18" y="19" width="12" height="10" rx="2"/><path d="M14 16l4 4M34 16l-4 4M14 32l4-4M34 32l-4-4"/></svg><h3>Drones DJI</h3><p>Captação aérea com ActiveTrack para obras e empreendimentos.</p></div>
-      <div class="card"><svg viewBox="0 0 48 48" aria-hidden="true"><rect x="6" y="14" width="36" height="18" rx="3"/><circle cx="16" cy="23" r="5"/><path d="M28 20h8M28 26h8"/></svg><h3>Projetor 4K</h3><p>Apresentações e exibições em tela grande, com áudio JBL.</p></div>
-      <div class="card"><svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="17"/><path d="M7 24h34M24 7c-7 8-7 26 0 34M24 7c7 8 7 26 0 34"/></svg><h3>Tradução em 200 idiomas</h3><p>Fones tradutores para reuniões internacionais em 200 idiomas e dialetos.</p></div>
+      <div class="exp-photos">
+        <figure class="rv"><img src="assets/roasted.webp" width="1280" height="720" alt="Grãos de café torrado em tom azulado" loading="lazy" decoding="async"><span class="ilus">imagem ilustrativa</span></figure>
+        <blockquote class="rv serif">“O sabor é a paisagem, em forma de xícara.”</blockquote>
+      </div>
+      <p class="exp-cta rv"><a class="btn btn-grad magnet" href="https://wa.me/5579991988251?text=Quero%20conhecer%20os%20caf%C3%A9s%20e%20cacaus%20de%20Bali" target="_blank" rel="noopener">Quero conhecer os cafés e cacaus de Bali</a></p>
     </div>
   </div>
-</section>
 
-<!-- 9. CLÍNICAS -->
-<section class="split dark" id="clinicas">
-  <div class="split-txt">
-    <p class="kick">Para clínicas e consultórios</p>
-    <h2>Rigor de saúde. Sem promessas milagrosas.</h2>
-    <p>Agentes que atendem, agendam, confirmam e lembram retornos — e que nunca diagnosticam, prescrevem ou orientam tratamento. Toda dúvida clínica vai direto para a equipe da casa.</p>
-    <ul class="dia light">
-      <li>Dados de saúde tratados como dados sensíveis (LGPD, art. 11)</li>
-      <li>Comunicação dentro das regras de publicidade médica do CFM</li>
-      <li>Sem antes e depois, sem garantia de resultado, sem sensacionalismo</li>
-      <li>Registro do que o agente responde e revisão periódica</li>
+  <div class="wrap imp-body">
+    <h3 class="imp-h3 rv">Curadoria em cinco segmentos</h3>
+    <p class="imp-sub rv">Selecionamos diretamente em Bali. Disponibilidade confirmada por pedido.</p>
+    <div class="route rv" aria-label="Rota: Bali, Indonésia até Aracaju, Brasil">
+      <div class="pin"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 22s7-6.5 7-12a7 7 0 1 0-14 0c0 5.5 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></svg><b>Bali</b><small>Indonésia</small></div>
+      <div class="line" aria-hidden="true"><span></span></div>
+      <div class="pin"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 22s7-6.5 7-12a7 7 0 1 0-14 0c0 5.5 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></svg><b>Aracaju</b><small>Brasil</small></div>
+    </div>
+    <ul class="snap prod" data-snap aria-label="Segmentos (deslize)">
+      <li class="icard tilt rv"><div class="mini"><img src="assets/roasted.webp" width="1280" height="720" alt="Grãos de café" loading="lazy" decoding="async"><span class="ilus">imagem ilustrativa</span></div><h3>Cafés especiais</h3><p>Cafés indonésios de origens tradicionais, como Kintamani (Bali), Sumatra (Gayo), Java e Toraja, para cafeterias, torrefações e varejo especializado.</p><span class="chip">Disponibilidade confirmada por pedido</span></li>
+      <li class="icard tilt rv"><div class="mini art cacao" aria-hidden="true"><svg viewBox="0 0 300 150"><g fill="none" stroke="#B8E8FF" stroke-width="2"><path d="M60 75C60 40 110 25 150 40C175 50 175 100 150 110C110 125 60 110 60 75Z"/><path d="M75 60C100 52 140 52 160 62M70 75C100 70 140 72 168 78M75 92C100 98 140 96 160 92"/><path d="M190 60c20-15 50-10 55 10s-15 40-35 38-35-30-20-48z"/><path d="M205 75c10-6 25-4 32 2"/></g></svg></div><h3>Cacau</h3><p>Cacau de cultivo artesanal da Indonésia, em amêndoas e derivados, para chocolatarias e indústria.</p><span class="chip">Disponibilidade confirmada por pedido</span></li>
+      <li class="icard tilt rv"><div class="mini art sweets" aria-hidden="true"><svg viewBox="0 0 300 150"><g fill="none" stroke="#B8E8FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M70 85h160c0 28-34 44-80 44S70 113 70 85z"/><path d="M95 85c0-18 12-26 25-26s22 8 30 8 25-10 38-8c12 2 17 14 17 26"/><circle cx="125" cy="62" r="5"/><circle cx="170" cy="58" r="5"/><path d="M150 32c-6 8 6 12 0 22"/></g></svg></div><h3>Iguarias</h3><p>Especialidades gastronômicas indonésias selecionadas na origem, para varejo gourmet e hospitalidade.</p><span class="chip">Disponibilidade confirmada por pedido</span></li>
+      <li class="icard tilt rv"><div class="mini art decor" aria-hidden="true"><svg viewBox="0 0 300 150"><g fill="none" stroke="#B8E8FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M110 112V60c0-14 10-22 40-22s40 8 40 22v52"/><path d="M104 78h92M104 112h92"/><path d="M120 112v18M180 112v18"/></g></svg></div><h3>Mobiliário</h3><p>Peças balinesas em madeira e fibras naturais para projetos de interiores, hotelaria e varejo.</p><span class="chip">Disponibilidade confirmada por pedido</span></li>
+      <li class="icard tilt rv"><div class="mini art craft" aria-hidden="true"><svg viewBox="0 0 300 150"><g fill="none" stroke="#B8E8FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M150 28c34 0 54 20 54 44 0 20-16 30-16 46H112c0-16-16-26-16-46 0-24 20-44 54-44z"/><path d="M122 66c10 6 18 6 28 0s18-6 28 0"/><path d="M130 92h40"/></g></svg></div><h3>Arte e artesanato</h3><p>Esculturas, cerâmica, têxteis e peças feitas à mão por artesãos de Bali, com curadoria direta.</p><span class="chip">Disponibilidade confirmada por pedido</span></li>
     </ul>
+    <div class="dots dark" data-dots role="group" aria-label="Navegação do carrossel"></div>
+
+    <div class="door rv"><p class="imp-h4">Na importação, porta a porta</p><ol class="steps5"><li>Origem</li><li>Seleção</li><li>Documentação</li><li>Logística</li><li>Entrega ao cliente</li></ol></div>
+    <p class="note rv">Conformidade regulatória conduzida caso a caso.</p>
+    <p class="imp-cta"><a class="btn btn-royal magnet" href="#contato">Falar sobre importação</a></p>
   </div>
-  <div class="split-art cross" aria-hidden="true"><svg viewBox="0 0 200 200"><path d="M80 30h40v50h50v40h-50v50H80v-50H30V80h50z" fill="none" stroke="currentColor" stroke-width="3"/><path d="M40 150h30l10-20 14 40 12-30h54" fill="none" stroke="currentColor" stroke-width="3"/></svg></div>
 </section>
 
-<!-- LIDERANÇA (espelha "Meet ..." da referência) -->
-<section class="sec" id="lideranca">
-  <div class="wrap two lead-row">
-    <figure class="ceo"><img src="assets/ceo.webp" alt="Carla Mecenas, CEO da I.ARIAN e da NEURALLOREE Filmes"></figure>
-    <div>
-      <p class="kick">Quem lidera</p>
-      <h2>Carla Mecenas</h2>
-      <p class="role">CEO · I.ARIAN &amp; NEURALLOREE Filmes</p>
-      <p>À frente das duas empresas, Carla une visão internacional e base em Aracaju para levar automação, inteligência artificial e produção audiovisual a empresas de todo o Brasil.</p>
-      <p>Na prática, ela trabalha todos os dias com a própria equipe de agentes de IA — e é essa rotina, testada no dia a dia, que serve de modelo para cada projeto entregue.</p>
-      <a class="btn btn-dark" href="#contato">Agende uma reunião</a>
+<!-- 10. COMO TRABALHAMOS -->
+<section class="sec" id="como">
+  <div class="wrap">
+    <p class="kick c rv">Como trabalhamos</p>
+    <h2 class="c rv">Um caminho claro, do primeiro contato à entrega.</h2>
+  </div>
+  <div class="snapwrap wrap">
+    <ol class="snap steps" data-snap aria-label="Etapas (deslize)">
+      <li class="card gb rv"><b>01</b><h3>Escuta</h3><p>Entendemos a empresa, o objetivo, o prazo e as regras do seu setor.</p></li>
+      <li class="card gb rv"><b>02</b><h3>Proposta</h3><p>Desenhamos a solução — agentes, filme ou importação — com escopo e etapas por escrito.</p></li>
+      <li class="card gb rv"><b>03</b><h3>Produção</h3><p>Agentes configurados e testados, filmes roteirizados e revisados, cargas conferidas na origem.</p></li>
+      <li class="card gb rv"><b>04</b><h3>Conformidade</h3><p>Regras de cada setor e documentação: checamos antes, não depois.</p></li>
+      <li class="card gb rv"><b>05</b><h3>Entrega e acompanhamento</h3><p>Colocamos no ar, entregamos na porta e seguimos ao seu lado.</p></li>
+    </ol>
+    <div class="dots" data-dots role="group" aria-label="Navegação do carrossel"></div>
+    <p class="c em rv">Nós orientamos e executamos. Você toma a decisão comercial.</p>
+  </div>
+</section>
+
+<!-- 11. EQUIPAMENTO -->
+<section class="sec alt" id="equipamento">
+  <div class="wrap">
+    <p class="kick rv">Estrutura</p>
+    <h2 class="rv">Equipamento de ponta, a serviço do projeto.</h2>
+    <div class="grid4 eq">
+      <div class="card gb rv"><svg viewBox="0 0 48 48" aria-hidden="true"><rect x="6" y="9" width="36" height="24" rx="2"/><path d="M16 39h16M24 33v6"/></svg><h3>Mac M5</h3><p>Edição, finalização e IA local com folga de desempenho.</p></div>
+      <div class="card gb rv"><svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="10" cy="12" r="6"/><circle cx="38" cy="12" r="6"/><circle cx="10" cy="36" r="6"/><circle cx="38" cy="36" r="6"/><rect x="18" y="19" width="12" height="10" rx="2"/><path d="M14 16l4 4M34 16l-4 4M14 32l4-4M34 32l-4-4"/></svg><h3>Drones DJI</h3><p>Captação aérea com ActiveTrack para obras e empreendimentos.</p></div>
+      <div class="card gb rv"><svg viewBox="0 0 48 48" aria-hidden="true"><rect x="6" y="14" width="36" height="18" rx="3"/><circle cx="16" cy="23" r="5"/><path d="M28 20h8M28 26h8"/></svg><h3>Projetor 4K</h3><p>Apresentações e exibições em tela grande, com áudio JBL.</p></div>
+      <div class="card gb rv"><svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="17"/><path d="M7 24h34M24 7c-7 8-7 26 0 34M24 7c7 8 7 26 0 34"/></svg><h3>Tradução em 200 idiomas</h3><p>Fones tradutores para reuniões internacionais em 200 idiomas e dialetos.</p></div>
     </div>
   </div>
 </section>
 
-<!-- 10. CONTATO -->
+<!-- 12. LIDERANÇA -->
+<section class="sec" id="lideranca">
+  <div class="wrap two center lead-row">
+    <figure class="ceo rv"><img data-parallax="-0.03" src="assets/i/ceo-900.webp" srcset="assets/i/ceo-480.webp 480w, assets/i/ceo-900.webp 900w" sizes="(max-width:900px) 80vw, 420px" width="900" height="1350" alt="Carla Mecenas, CEO da I.ARIAN e da NEURALLOREE Filmes" loading="lazy" decoding="async"></figure>
+    <div>
+      <p class="kick rv">Quem lidera</p>
+      <h2 class="rv">Carla Mecenas</h2>
+      <p class="role rv">CEO · I.ARIAN &amp; NEURALLOREE Filmes</p>
+      <p class="rv">À frente das duas empresas, Carla une visão internacional e base em Aracaju para levar automação, inteligência artificial e produção audiovisual a empresas de todo o Brasil.</p>
+      <p class="rv">Na prática, ela trabalha todos os dias com a própria equipe de agentes de IA — e é essa rotina, testada no dia a dia, que serve de modelo para cada projeto entregue.</p>
+      <a class="btn btn-cyan mt-s" href="#contato">Agende uma reunião</a>
+    </div>
+  </div>
+</section>
+
+<!-- 13. CONTATO -->
 <section class="sec alt" id="contato">
   <div class="wrap two">
     <div>
-      <p class="kick">Contato</p>
-      <h2>Vamos conversar sobre o seu projeto?</h2>
-      <p class="lead dark">Conte o que você precisa. Retornamos para agendar uma reunião e entender se somos a parceira certa.</p>
-      <p class="contact"><a class="btn btn-cyan" href="https://wa.me/5579991988251?text=Ol%C3%A1!%20Quero%20agendar%20uma%20reuni%C3%A3o." target="_blank" rel="noopener">WhatsApp (79) 99198-8251</a></p>
+      <p class="kick rv">Contato</p>
+      <h2 class="rv">Vamos conversar sobre o seu projeto?</h2>
+      <p class="lead dark rv">Conte o que você precisa. Retornamos para agendar uma reunião e entender se somos a parceira certa.</p>
+      <p class="contact rv"><a class="btn btn-cyan" href="https://wa.me/5579991988251?text=Ol%C3%A1!%20Quero%20agendar%20uma%20reuni%C3%A3o." target="_blank" rel="noopener">WhatsApp (79) 99198-8251</a></p>
       <p class="note">Aracaju · Sergipe · Brasil</p>
     </div>
-    <form class="form" id="form">
+    <form class="form gb rv" id="form">
       <label>Nome<input name="nome" required autocomplete="name"></label>
       <label>Empresa<input name="empresa" autocomplete="organization"></label>
       <label>Cidade / UF<input name="cidade"></label>
-      <label>Interesse<select name="interesse" required><option value="">Selecione</option><option>Agentes de IA (I.ARIAN)</option><option>Jarvis pessoal (Premium)</option><option>Filme ou comercial (NEURALLOREE)</option><option>Drone para obra ou empreendimento</option><option>Filme ou livro personalizado</option><option>Importação — café torrado</option><option>Importação — cacau para indústria</option><option>Clínica ou consultório</option><option>Outro</option></select></label>
+      <label>Interesse<select name="interesse" required><option value="">Selecione</option><option>Agentes de IA (I.ARIAN)</option><option>Jarvis pessoal (Premium)</option><option>Filme ou comercial (NEURALLOREE)</option><option>Drone para obra ou empreendimento</option><option>Filme ou livro personalizado</option><option>Importação — cafés e cacau</option><option>Importação — iguarias</option><option>Importação — mobiliário, arte e artesanato</option><option>Clínica ou consultório</option><option>Outro</option></select></label>
       <label class="full">Mensagem<textarea name="msg" rows="4"></textarea></label>
       <p class="note full">Ao enviar, abrimos o WhatsApp com a sua mensagem. Seus dados são usados só para este contato (LGPD).</p>
-      <button class="btn btn-cyan full" type="submit">Agende uma reunião pelo WhatsApp</button>
+      <button class="btn btn-grad full" type="submit">Agende uma reunião pelo WhatsApp</button>
     </form>
   </div>
 </section>
@@ -299,37 +431,40 @@
 <!-- FAQ -->
 <section class="sec" id="faq">
   <div class="wrap narrow">
-    <p class="kick c">Dúvidas comuns</p>
-    <h2 class="c">Perguntas frequentes</h2>
+    <p class="kick c rv">Dúvidas comuns</p>
+    <h2 class="c rv">Perguntas frequentes</h2>
     <details><summary>Os agentes de IA substituem a minha equipe?</summary><p>Não. Eles cuidam do repetitivo — atender, agendar, confirmar, organizar — e encaminham para pessoas tudo o que pede julgamento. Quem decide continua sendo a sua equipe.</p></details>
     <details><summary>Como os dados da minha empresa são protegidos?</summary><p>Os dados ficam sob o controle de quem contrata, com acesso mínimo para cada agente, verificação em duas etapas, cofre de senhas e cópias de segurança, conforme a LGPD. Não usamos esses dados para treinar modelos públicos.</p></details>
     <details><summary>O que é o Jarvis pessoal do pacote Premium?</summary><p>Uma secretária de IA exclusiva para você: organiza e-mails, agenda e lembretes da sua rotina, além da equipe de agentes da empresa.</p></details>
     <details><summary>Vocês atendem fora de Aracaju?</summary><p>Sim. Agentes, filmes e conteúdos digitais são entregues em todo o Brasil; captação com drone é combinada conforme o local.</p></details>
     <details><summary>Os filmes deixam claro que usam IA?</summary><p>Sim. Cenas geradas por inteligência artificial levam o selo “imagens ilustrativas”, e todo material passa por revisão humana antes da entrega.</p></details>
-    <details><summary>Vocês importam café verde da Indonésia?</summary><p>Não. Hoje não há via de importação autorizada pelo MAPA para café verde de origem indonésia. Trabalhamos com café torrado e com cacau de Sulawesi destinado à indústria.</p></details>
-    <details><summary>Posso revender o cacau importado?</summary><p>Não antes do processamento. Pela regra do MAPA, o cacau indonésio admitido no Brasil deve seguir para industrialização.</p></details>
     <details><summary>Vocês informam preços pelo site?</summary><p>Não. Cada projeto e cada operação de importação tem escopo próprio. Os valores são apresentados em proposta, depois da reunião.</p></details>
-    <details><summary>E os móveis e a decoração?</summary><p>Essa linha está em preparação com a parceira na Indonésia. Deixe seu contato para ser avisado quando abrir.</p></details>
+    <details><summary>O que vocês importam da Indonésia?</summary><p>Trabalhamos com curadoria direta em Bali em cinco segmentos: cafés especiais, cacau, iguarias, mobiliário e arte e artesanato. A disponibilidade é confirmada por pedido, e a conformidade regulatória é conduzida caso a caso.</p></details>
   </div>
 </section>
 
 <section class="final">
   <div class="wrap c">
-    <h2>Pessoas que decidem. Agentes que executam. Filmes que convencem.</h2>
-    <a class="btn btn-cyan" href="#contato">Agende uma reunião</a>
+    <h2 class="rv">Pessoas que decidem. Agentes que executam. Filmes que convencem.</h2>
+    <a class="btn btn-grad" href="#contato">Agende uma reunião</a>
   </div>
 </section>
 </main>
 
 <footer class="foot">
   <div class="wrap fgrid">
-    <div><span class="wm-iarian">I.ARIAN</span> <span class="amp">&amp;</span>
-      <span class="lockup"><img class="logo-icon" src="assets/logo_neuralloree_icon.png" alt=""><span class="wm-nl">NEURALLOREE<small>FILMES · SE</small></span></span>
+    <div><span class="wm-iarian">I.ARIAN</span> <span class="amp" aria-hidden="true">&amp;</span>
+      <span class="lockup"><img class="logo-icon" src="assets/logo_neuralloree_icon.png" width="36" height="33" alt="" loading="lazy"><span class="wm-nl">NEURALLOREE<small>FILMES · SE</small></span></span>
       <p>Aracaju · Sergipe · Brasil</p></div>
-    <div><p>Importação Indonésia → Brasil, com um parceiro de exportação em Bali, Indonésia.</p></div>
+    <div><p>Importação Indonésia → Brasil, com curadoria direta em Bali, Indonésia.</p></div>
     <div><p>Cenas geradas por IA são identificadas como imagens ilustrativas.</p><p>© 2026</p></div>
   </div>
 </footer>
-<script src="main.js"></script>
+
+<div class="dock" id="dock" aria-label="Ações rápidas">
+  <a class="btn btn-cyan" href="https://wa.me/5579991988251?text=Ol%C3%A1!%20Quero%20agendar%20uma%20reuni%C3%A3o." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12a8.5 8.5 0 0 1-12.4 7.5L3 21l1.6-5.4A8.5 8.5 0 1 1 21 12z"/></svg>WhatsApp</a>
+  <a class="btn btn-grad" href="#contato"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>Agendar</a>
+</div>
+<script src="main.js" defer></script>
 </body>
 </html>
