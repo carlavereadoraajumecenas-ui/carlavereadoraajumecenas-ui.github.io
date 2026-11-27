@@ -598,3 +598,9 @@ h2.rv.in::after{transform:scaleX(1)}
   .book-cover,.book-reel{max-height:520px}
   .book-cover img,.book-reel video{object-position:50% 20%}
 }
+
+.pillars{display:flex;flex-wrap:wrap;gap:8px;list-style:none;padding:0;margin:16px 0 0}
+.pillars li{padding:8px 14px;border-radius:999px;border:1px solid rgba(125,216,247,.35);background:rgba(34,199,240,.08);font:600 .85rem var(--f-h);letter-spacing:.06em;text-transform:uppercase;color:var(--cyan2)}
+@media(min-width:900px){
+  .trio{grid-template-columns:repeat(2,1fr)}
+}
